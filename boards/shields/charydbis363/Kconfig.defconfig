@@ -1,0 +1,16 @@
+if SHIELD_CHARYBDIS363_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Charybdis363"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_CHARYBDIS363_LEFT || SHIELD_CHARYBDIS363_RIGHT
+
+config ZMK_SPLIT
+	default y
+	
+endif

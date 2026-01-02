@@ -76,10 +76,10 @@
 
         navigation {
             bindings = <
-&trans     &trans   &trans  &trans  &mkp MCLK  &trans       &trans                &trans                 &trans               &trans               &trans  &trans
-&kp CAPS   &trans   &trans  &trans  &mkp LCLK  &mkp RCLK    &kp LEFT              &kp DOWN               &kp UP               &kp RIGHT            &trans  &trans
-&trans     &trans   &trans  &trans  &trans     &trans       &kp HOME              &kp PAGE_DOWN          &kp PAGE_UP          &kp END              &trans  &trans
-                            &trans  &trans     &trans       &trans                &trans                 &trans
+&trans     &trans   &trans  &trans       &mkp MCLK  &trans       &trans    &trans         &trans      &trans     &trans  &trans
+&kp CAPS   &trans   &trans  &trans       &mkp LCLK  &mkp RCLK    &kp LEFT  &kp DOWN       &kp UP      &kp RIGHT  &trans  &trans
+&trans     &trans   &trans  &trans       &trans     &trans       &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP &kp END    &trans  &trans
+                            &bootloader  &trans     &trans       &trans    &trans         &trans
             >;
         };
 

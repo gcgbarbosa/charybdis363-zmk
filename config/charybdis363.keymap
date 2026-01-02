@@ -6,14 +6,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 
-&mmv {    
-     time-to-max-speed-ms = <500>;
-     acceleration-exponent=<1>;
-};
-&mwh {    
-    time-to-max-speed-ms = <4000>;
-    acceleration-exponent=<0>;
-}; 
 
 / {
     chosen { zmk,matrix_transform = &default_transform; };

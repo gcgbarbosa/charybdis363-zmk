@@ -50,13 +50,13 @@
 
         compatible = "zmk,combos";
 
-        ResetLeft {
-            bindings = <&bootloader>;
+        EnableAdjust {
+            bindings = <&to 4>;
             key-positions = <0 24>;
         };
 
-        ResetRight {
-            bindings = <&bootloader>;
+        DisableAdjust {
+            bindings = <&to 0>;
             key-positions = <11 35>;
         };
     };
@@ -76,10 +76,10 @@
 
         navigation {
             bindings = <
-&trans     &trans   &trans  &trans       &mkp MCLK  &trans       &trans    &trans         &trans      &trans     &trans  &trans
-&kp CAPS   &trans   &trans  &trans       &mkp LCLK  &mkp RCLK    &kp LEFT  &kp DOWN       &kp UP      &kp RIGHT  &trans  &trans
-&trans     &trans   &trans  &trans       &trans     &trans       &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP &kp END    &trans  &trans
-                            &bootloader  &trans     &trans       &trans    &trans         &trans
+&trans       &trans   &trans  &trans       &mkp MCLK  &trans       &trans    &trans         &trans      &trans     &trans  &trans
+&kp CAPS     &trans   &trans  &trans       &mkp LCLK  &mkp RCLK    &kp LEFT  &kp DOWN       &kp UP      &kp RIGHT  &trans  &trans
+&bootloader  &trans   &trans  &trans       &trans     &trans       &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP &kp END    &trans  &trans
+                              &trans       &trans     &trans       &trans    &trans         &trans
             >;
         };
 
@@ -100,7 +100,6 @@
                                     &trans        &trans          &trans   &trans          &trans        &trans
             >;
         };
-
 
         adjust_layer {
             bindings = <

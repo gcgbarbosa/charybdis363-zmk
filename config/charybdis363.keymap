@@ -6,7 +6,7 @@
 
 // https://zmk.dev/docs/keymaps/behaviors/mouse-emulation#mouse-emulation-defines
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 #include <dt-bindings/zmk/pointing.h>
 
@@ -16,8 +16,8 @@
 };
 
 &msc {
+    time-to-max-speed-ms = <2000>;
     acceleration-exponent = <0>; 
-    time-to-max-speed-ms = <1000>;      
 };
 
 / {

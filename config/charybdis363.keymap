@@ -65,12 +65,7 @@
 
         EnableAdjust {
             bindings = <&to 4>;
-            key-positions = <0 24>;
-        };
-
-        DisableAdjust {
-            bindings = <&to 0>;
-            key-positions = <11 35>;
+            key-positions = <0 11>;
         };
     };
 
@@ -89,7 +84,7 @@
 
         navigation {
             bindings = <
-&kp LC(LEFT)  &trans          &mmv MOVE_UP     &trans           &mkp MCLK       &trans          &trans          &trans         &trans         &trans      &trans  &kp LC(RIGHT)
+&kp LA(LEFT)  &trans          &mmv MOVE_UP     &trans           &mkp MCLK       &kp LG(DOT)     &trans          &trans         &trans         &trans      &trans  &kp LA(RIGHT)
 &kp CAPS      &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &mkp LCLK       &mkp RCLK       &kp LEFT        &kp DOWN       &kp UP         &kp RIGHT   &trans  &trans
 &trans        &kp PSCRN       &msc SCRL_LEFT   &msc SCRL_UP     &msc SCRL_DOWN  &msc SCRL_RIGHT &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP    &kp END     &trans  &trans
                                                &trans           &trans          &trans          &trans          &trans         &trans
@@ -107,19 +102,19 @@
 
         numbers {
             bindings = <
-&trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans          &trans   &trans          &trans        &trans            &trans        &trans        &trans
-&trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0    &trans   &trans          &trans        &trans            &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans          &trans   &trans          &trans        &trans            &trans        &trans        &trans
-                                    &trans        &trans          &trans   &trans          &trans        &trans
+&trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans          &trans   &trans           &trans        &trans    &trans   &trans   &trans
+&trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0    &trans   &kp LG(LC(SPC))  &trans        &trans    &trans   &trans   &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans          &trans   &trans           &trans        &trans    &trans   &trans   &trans
+                                    &trans        &trans          &trans   &trans           &trans        &trans
             >;
         };
 
         adjust_layer {
             bindings = <
-&bootloader  &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &bootloader
-&none        &none         &none         &none         &none         &none           &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-&sys_reset   &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &sys_reset
-                                         &trans        &none         &trans          &trans        &none         &trans
+&to 0        &none         &none         &none         &none         &bootloader     &bootloader   &none         &none         &none         &none         &to 0
+&none        &none         &none         &none         &none         &none           &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&none        &none         &none         &none         &none         &sys_reset      &sys_reset    &none         &none         &none         &none         &none
+                                         &none         &none         &none           &none         &none         &none
             >;
         };
 
